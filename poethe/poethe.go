@@ -60,7 +60,7 @@ func ParseColors(input string) ([]*color.RGBA, error) {
 // TODO: document
 type Generator interface {
 	Description() string
-	Generate(colors []*color.RGBA) []*color.RGBA
+	Generate(colors []*color.RGBA) ([]*color.RGBA, error)
 }
 
 // TODO: document

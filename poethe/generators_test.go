@@ -2,9 +2,10 @@
 package poethe_test
 
 import (
-	"github.com/idagio/poethe/poethe"
 	"image/color"
 	"testing"
+
+	"github.com/idagio/poethe/poethe"
 )
 
 func TestRandomGenerator(t *testing.T) {
@@ -44,7 +45,8 @@ func TestRandomGenerator(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		if got := generator.Generate(test.input); len(got) != test.want {
+		got, _ := generator.Generate(test.input)
+		if len(got) != test.want {
 			t.Errorf("Wanted (%d), got (%d)", test.want, len(got))
 		}
 	}

@@ -53,7 +53,11 @@ func main() {
 		os.Exit(1)
 	}
 
-	palette := gen.Generate(colors)
+	palette, err := gen.Generate(colors)
+	if err != nil {
+		fmt.Printf("%s", err)
+		os.Exit(1)
+	}
 
 	// Generate the colors
 	formattedOutput := poethe.FormatColors(palette)
@@ -81,7 +85,12 @@ func buildGenerators() map[string]poethe.Generator {
 	rg := &poethe.RandomGenerator{
 		Seed: time.Now().UnixNano(),
 	}
+	tg := &poethe.TriadMixGenerator{
+		GreyControl: 1,
+	}
+
 	generators["random"] = rg
+	generators["triad"] = tg
 
 	return generators
 }
