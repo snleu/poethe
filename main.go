@@ -2,7 +2,7 @@
 package main
 
 import (
-	"github.com/idagio/poethe/poethe"
+	"github.com/snleu/poethe/poethe"
 
 	"flag"
 	"fmt"
