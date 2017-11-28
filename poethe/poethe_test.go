@@ -2,7 +2,7 @@
 package poethe_test
 
 import (
-	"github.com/idagio/poethe/poethe"
+	"github.com/snleu/poethe/poethe"
 	"testing"
 )
 
