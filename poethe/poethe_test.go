@@ -2,7 +2,6 @@
 package poethe_test
 
 import (
-	"fmt"
 	"github.com/snleu/poethe/poethe"
 	"testing"
 )
